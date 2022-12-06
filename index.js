@@ -1,5 +1,7 @@
 const fs = require('fs');
 
+const PATH_TO_DESIRED_DIRECTORY = '/path/to/desired/directory';
+
 function getFiles(dir, files_) {
   files_ = files_ || [];
   var files = fs.readdirSync(dir);
@@ -89,7 +91,7 @@ function main() {
     if (isPx(m)) return handlePx(m);
     return handleUtil(m);
   };
-  const files = getFiles('/Users/samuelpetering/toolbox/gearfocus-web/src');
+  const files = getFiles(PATH_TO_DESIRED_DIRECTORY);
   // const files = getFiles('data');
   const options = {
     files: files,
